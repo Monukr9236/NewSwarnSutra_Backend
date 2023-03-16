@@ -1,0 +1,14 @@
+const mongoose=require('mongoose');
+
+// Defining schema for the user
+const Schema = mongoose.Schema;
+const itemSchema = new Schema({
+  name: String,
+  email:String,
+  password:String
+});
+
+// Defining model of product
+const productItem=mongoose.model('products',itemSchema);
+
+module.exports=productItem;
